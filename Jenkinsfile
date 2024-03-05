@@ -28,6 +28,12 @@ pipeline {
                 sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' 
             }
         }
+
+        stage('Copy Non-Java Files') {
+            steps {
+                sh 'rsync -av --exclude="*.java" src/ target/'
+            }
+        }
         
         stage('Zip') {
             steps {
