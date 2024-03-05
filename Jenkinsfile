@@ -28,7 +28,7 @@ pipeline {
                 sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' 
             }
         }
-        /*
+        
         stage('Zip') {
             when {
                 expression { currentBuild.result == 'SUCCESS' }
@@ -38,7 +38,7 @@ pipeline {
                 sh 'cd target && zip --verbose -r ../customization_binaries.zip *'
             }
         }
-        */
+        
     }
     
     post {
