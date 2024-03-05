@@ -27,9 +27,6 @@ pipeline {
                 sh 'find src -name "*.java" > sources.txt' 
                 sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' 
             }
-            failure {
-                echo 'Compile stage failed!'
-            }
         }
         
         stage('Zip') {
