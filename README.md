@@ -7,6 +7,11 @@ Working with Maximo and Jenkins
 1) Checkout your source code from this repository
 2) Use the steps in Jenksfile
 
+![Pipeline01](readme_images/pipeline01.png)
+
+![Pipeline02](readme_images/pipeline02.png)
+
+![Pipeline03](readme_images/pipeline03.png)
 
 ## In **Jenkinsfile** will do:
 
