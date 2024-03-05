@@ -1,2 +1,2 @@
-# java-jenkins
-Working with Java and Jenkins
+# maximo-jenkins
+Working with Maximo and Jenkins
