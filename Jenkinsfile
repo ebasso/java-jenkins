@@ -31,7 +31,11 @@ pipeline {
         
         stage('Zip') {
             when {
-                echo 'currentBuild.result' + currentBuild.result
+                if (currentBuild.result == 'SUCCESS') {
+                    echo 'Build was successful!'
+                } else {
+                    echo 'Build failed!'
+                }
                 expression { currentBuild.result == 'SUCCESS' }
             }
             steps {
