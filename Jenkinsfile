@@ -30,9 +30,6 @@ pipeline {
         }
         
         stage('Zip') {
-            when {
-                return previousCompile?.result == 'SUCCESS'
-            }
             steps {
                 // Zip the contents of the target directory
                 sh 'cd target && zip --verbose -r ../customization_binaries.zip *'
