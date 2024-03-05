@@ -1,5 +1,13 @@
 pipeline {
     agent any
+
+    environment {
+        // Define environment variables here
+        JAVA_HOME = '/opt/IBM/ibm-java-x86_64-80'
+        LIB_DIR = '/opt/IBM/SMP_7613/maximo/applications/maximo/lib/*'
+        CLASS_DIR = '/opt/IBM/SMP_7613/maximo/applications/maximo/businessobjects/classes/*'
+        // Add more variables as needed
+    }
     
     stages {
         /* stage('Checkout') {
@@ -14,7 +22,7 @@ pipeline {
                 // Compile Java code using a specific JDK
                 sh 'mkdir -p target' // Create the target directory if it doesn't exist
                 sh 'find src -name "*.java" > sources.txt' // List all Java files recursively and save to sources.txt
-                sh '/opt/IBM/ibm-java-x86_64-80/bin/javac -d target -cp "/opt/IBM/SMP_7613/maximo/applications/maximo/lib/*" @sources.txt' // Compile all Java files listed in sources.txt using the specified JDK and include JAR files from specified directories
+                sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' // Compile all Java files listed in sources.txt using the specified JDK and include JAR files from specified directories
             }
         }
         
