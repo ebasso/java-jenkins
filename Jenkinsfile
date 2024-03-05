@@ -16,6 +16,7 @@ pipeline {
                 git 'https://github.com/ebasso/maximo-jenkins.git'
             }
         }*/
+        
         // Create the target directory if it doesn't exist
         // List all Java files recursively and save to sources.txt
         // Compile all Java files listed in sources.txt using the specified JDK and include JAR files from specified directories
