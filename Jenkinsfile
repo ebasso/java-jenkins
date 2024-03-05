@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
+        /* stage('Checkout') {
             steps {
                 // Checkout your source code from version control, for example, Git
                 git 'https://github.com/ebasso/java-jenkins.git'
             }
-        }
+        }*/
         
         stage('Compile') {
             steps {
