@@ -24,7 +24,7 @@ pipeline {
             }
             steps {
                 // Zip the contents of the target directory
-                sh 'cd target && zip -r ../compiled_code.zip *'
+                sh 'cd target && zip -r ../customization_binaries.zip *'
             }
         }
     }
