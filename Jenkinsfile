@@ -5,7 +5,7 @@ pipeline {
         /* stage('Checkout') {
             steps {
                 // Checkout your source code from version control, for example, Git
-                git 'https://github.com/ebasso/java-jenkins.git'
+                git 'https://github.com/ebasso/maximo-jenkins.git'
             }
         }*/
         
