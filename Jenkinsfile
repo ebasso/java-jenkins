@@ -16,13 +16,15 @@ pipeline {
                 git 'https://github.com/ebasso/maximo-jenkins.git'
             }
         }*/
-        
+        // Create the target directory if it doesn't exist
+        // List all Java files recursively and save to sources.txt
+        // Compile all Java files listed in sources.txt using the specified JDK and include JAR files from specified directories
         stage('Compile') {
             steps {
                 // Compile Java code using a specific JDK
-                sh 'mkdir -p target' // Create the target directory if it doesn't exist
-                sh 'find src -name "*.java" > sources.txt' // List all Java files recursively and save to sources.txt
-                sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' // Compile all Java files listed in sources.txt using the specified JDK and include JAR files from specified directories
+                sh 'mkdir -p target' 
+                sh 'find src -name "*.java" > sources.txt' 
+                sh '$JAVA_HOME/bin/javac -d target -cp "$LIB_DIR:$CLASS_DIR" @sources.txt' 
             }
         }
         
