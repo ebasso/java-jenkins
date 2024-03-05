@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Define environment variables here
         JAVA_HOME = '/opt/IBM/ibm-java-x86_64-80'
-        LIB_DIR = '/opt/IBM/SMP_7613/maximo/applications/maximo/lib/blabal/*'
+        LIB_DIR = '/opt/IBM/SMP_7613/maximo/applications/maximo/lib/*'
         CLASS_DIR = '/opt/IBM/SMP_7613/maximo/applications/maximo/businessobjects/classes/*'
         // Add more variables as needed
     }
